@@ -1,0 +1,17 @@
+<%- include('header') %>
+
+<div id="products">
+    <% products.forEach(product => { %>
+        <div class="product">
+
+            <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+            <h2><%= product.title %></h2>
+            <p>Price: &#8360; <%= product.price %></p>
+            <button onclick="addToCart('<%= product.id %>', '<%= product.title %>', '<%= product.price %>', '<%= product.imageUrl %>')">Add to Cart</button>
+        </div>
+    <% }); %>
+    </div>
+
+<%- include('footer') %>
+<script src="/scripts.js"></script>
+ 

@@ -1,0 +1,14 @@
+<%- include('header') %>
+
+<div id="cart-items">
+    <h2>Your Cart</h2>
+    <p id="empty-cart-message">No items in your cart.</p>
+    <ul id="cart-list"></ul> 
+<button onclick="checkout()">Checkout</button>
+
+<%- include('footer') %>
+
+<script src="/scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', displayCart);
+</script>
